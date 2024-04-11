@@ -248,7 +248,7 @@ $RECYCLE.BIN/
 *.lnk
 
 #image file
-.png
-.jpg
+*.png
+*.jpeg
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,python
