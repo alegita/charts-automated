@@ -1,7 +1,7 @@
 import read_csv
 import charts
 import utils
-import pandas pd
+import pandas as pd
 
 def run():
     '''
@@ -10,7 +10,7 @@ def run():
     percentages = list(map(lambda x:x['World Population Percentage'], data))
     '''
     df = pd.read_csv('data.csv')
-    df = df(df['Continent'] == 'Africa')
+    df = df[df['Continent'] == 'Africa']
     
     countries = df['Country'].values
     percentages = df['World Population Percentage'].values
@@ -21,7 +21,7 @@ def run():
     country = input('Type Country =>')
     print(country)
     
-    result = utils.population_by_countries(data, country)
+    result = utils.population_by_country(data, country)
     
     if len(result) > 0:
         country = result[0]
